@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".HomeActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--        <include-->
+        <!--            layout="@layout/quick_group_item"-->
+        <!--            android:id="@+id/quick_group_all"/>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/quick_group_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/breed_chip_group_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quick_group_all"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+
+                android:id="@+id/breed_chip_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/posts_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/breed_chip_group_scrollview"/>
+    </RelativeLayout>
+
+
+</ScrollView>
